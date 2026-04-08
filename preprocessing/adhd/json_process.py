@@ -12,8 +12,7 @@ root_path = os.path.dirname(os.path.dirname(cur_path))
 processed_data_path = os.path.join(root_path, 'data/adhd/processed_data')
 
 sampling_rate = 128
-ch_names = ["Fz", "Cz", "Pz", "C3", "T3", "C4", "T4", "Fp1", "Fp2", "F3", "F4", "F7",
-            "F8", "P3", "P4", "T5", "T6", "O1", "O2"]
+ch_names = ['Fp1', 'Fp2', 'F3', 'F4', 'C3', 'C4', 'P3', 'P4', 'O1', 'O2', 'F7', 'F8', 'T7', 'T8', 'P7', 'P8', 'Fz', 'Cz', 'Pz']
 num_channels = len(ch_names)
 
 
