@@ -1,0 +1,1437 @@
+{
+  "subject_data": [
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0000.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0001.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0002.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0003.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0004.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0005.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0006.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0007.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0008.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0009.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0010.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0011.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0012.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0013.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0014.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0015.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0016.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0017.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0018.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0019.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0020.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0021.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H6/sample_0022.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0000.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0001.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0002.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0003.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0004.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0005.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0006.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0007.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0008.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0009.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0010.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0011.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0012.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0013.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0014.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0015.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0016.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0017.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0018.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0019.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0020.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0021.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "H1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H1/sample_0022.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0000.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0001.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0002.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0003.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0004.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0005.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0006.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0007.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0008.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0009.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0010.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0011.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0012.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0013.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0014.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0015.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0016.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0017.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0018.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0019.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0020.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0021.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "H3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H3/sample_0022.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0000.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0001.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0002.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0003.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0004.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0005.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0006.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0007.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0008.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0009.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0010.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0011.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0012.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0013.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0014.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0015.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0016.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0017.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0018.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0019.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0020.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0021.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "H5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H5/sample_0022.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0000.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0001.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0002.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0003.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0004.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0005.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0006.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0007.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0008.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0009.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0010.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0011.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0012.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0013.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0014.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0015.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0016.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0017.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0018.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0019.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0020.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0021.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0022.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0000.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0001.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0002.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0003.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0004.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0005.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0006.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0007.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0008.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0009.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0010.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0011.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0012.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0013.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0014.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0015.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0016.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0017.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0018.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0019.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0020.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0021.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "P6",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P6/sample_0022.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0000.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0001.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0002.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0003.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0004.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0005.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0006.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0007.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0008.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0009.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0010.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0011.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0012.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0013.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0014.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0015.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0016.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0017.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0018.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0019.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0020.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0021.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P5/sample_0022.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0000.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0001.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0002.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0003.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0004.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0005.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0006.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0007.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0008.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0009.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0010.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0011.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0012.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0013.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0014.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0015.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0016.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0017.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0018.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0019.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0020.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0021.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 0,
+      "subject_name": "P0",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P0/sample_0022.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0000.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0001.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0002.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0003.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0004.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0005.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0006.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0007.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0008.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0009.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0010.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0011.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0012.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0013.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0014.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0015.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0016.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0017.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0018.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0019.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0020.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0021.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "P1",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P1/sample_0022.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0000.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0001.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0002.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0003.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0004.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0005.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0006.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0007.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0008.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0009.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0010.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0011.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0012.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0013.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0014.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0015.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0016.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0017.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0018.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0019.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0020.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0021.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 3,
+      "subject_name": "P3",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P3/sample_0022.pkl",
+      "label": 1
+    }
+  ],
+  "dataset_info": {
+    "sampling_rate": 128,
+    "ch_names": [
+      "AF3",
+      "F7",
+      "F3",
+      "FC5",
+      "T7",
+      "P7",
+      "O1",
+      "O2",
+      "P8",
+      "T8",
+      "FC6",
+      "F4",
+      "F8",
+      "AF4"
+    ],
+    "min": -0.0012872155423663796,
+    "max": 0.0016274143704170787,
+    "mean": [
+      -9.126107957436768e-08,
+      -1.3075803108103452e-07,
+      1.1277795220793219e-07,
+      2.2556480245763246e-07,
+      -6.957149378718772e-08,
+      -5.177581699618547e-08,
+      -1.3315402803372954e-08,
+      -4.1978627129138886e-08,
+      2.855003292950025e-07,
+      -5.32250670767616e-08,
+      -9.342688036562407e-08,
+      1.8687715809371144e-07,
+      -8.494428232149484e-08,
+      -1.8046356091910413e-07
+    ],
+    "std": [
+      2.374349885003826e-05,
+      3.4147527347535706e-05,
+      2.0406896313118846e-05,
+      4.819560830019232e-05,
+      2.5941418751743365e-05,
+      2.27729937277121e-05,
+      2.2061030360764874e-05,
+      2.261934985730602e-05,
+      4.728685612605103e-05,
+      2.9777000968272246e-05,
+      3.003422308303488e-05,
+      4.3308540947253245e-05,
+      3.259042522717242e-05,
+      2.9086357555671115e-05
+    ]
+  }
+}

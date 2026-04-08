@@ -1,0 +1,333 @@
+{
+  "subject_data": [
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0000.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0001.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0002.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0003.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0004.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0005.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0006.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0007.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0008.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0009.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0010.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0011.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0012.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0013.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0014.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0015.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0016.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0017.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0018.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0019.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0020.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0021.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 2,
+      "subject_name": "H2",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/H2/sample_0022.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0000.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0001.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0002.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0003.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0004.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0005.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0006.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0007.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0008.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0009.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0010.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0011.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0012.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0013.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0014.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0015.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0016.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0017.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0018.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0019.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0020.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0021.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 4,
+      "subject_name": "P4",
+      "file": "/hdd1/wsr/RFT/data/idd/processed_data/P4/sample_0022.pkl",
+      "label": 1
+    }
+  ],
+  "dataset_info": {
+    "sampling_rate": 128,
+    "ch_names": [
+      "AF3",
+      "F7",
+      "F3",
+      "FC5",
+      "T7",
+      "P7",
+      "O1",
+      "O2",
+      "P8",
+      "T8",
+      "FC6",
+      "F4",
+      "F8",
+      "AF4"
+    ],
+    "min": -0.0060122020609557035,
+    "max": 0.002294882032270187,
+    "mean": [
+      -6.580924916679118e-08,
+      -1.27789391930892e-07,
+      6.807732461689217e-08,
+      1.6760618202156802e-07,
+      -3.578576763263054e-08,
+      -1.0628192384845716e-08,
+      -6.034537652310765e-09,
+      -3.239929749609777e-08,
+      2.339264236699895e-07,
+      -2.3844430789201945e-08,
+      -1.1263759090039039e-07,
+      2.303642295522847e-07,
+      -1.1401625049883164e-07,
+      -1.7102945140874256e-07
+    ],
+    "std": [
+      2.4498250776842334e-05,
+      3.39948121672818e-05,
+      2.208885193810097e-05,
+      5.258002410988511e-05,
+      2.8144214708857458e-05,
+      2.45557832576089e-05,
+      2.410578328332945e-05,
+      2.3739777642529517e-05,
+      5.5070425785639514e-05,
+      3.444375402628106e-05,
+      2.886364610358993e-05,
+      5.117590846389496e-05,
+      3.383226848406352e-05,
+      2.8382700107193292e-05
+    ]
+  }
+}
