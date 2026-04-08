@@ -61,8 +61,7 @@ if __name__ == '__main__':
 
     sampling_rate = 128
     window_sec = 10
-    STANDARD_CHANNELS = ["Fz", "Cz", "Pz", "C3", "T3", "C4", "T4", "Fp1", "Fp2", "F3", "F4", "F7","F8",
-       "P3", "P4", "T5", "T6", "O1", "O2"]
+    STANDARD_CHANNELS = ['Fp1', 'Fp2', 'F3', 'F4', 'C3', 'C4', 'P3', 'P4', 'O1', 'O2', 'F7', 'F8', 'T7', 'T8', 'P7', 'P8', 'Fz', 'Cz', 'Pz']
 
     control_data_path = os.path.join(root_path, 'data/adhd/raw_data/control')
     all_control_path = glob(control_data_path + '/*.mat')
