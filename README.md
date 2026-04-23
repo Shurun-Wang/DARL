@@ -141,8 +141,6 @@ python main_plot_topo.py --dataset 'adhd' --model_name 'OhCNN'
 │   ├── STGEFormer.py
 │   └── SzHNN.py
 ├── scripts/                 # Utility scripts for HPC
-├── results/                 # XAI results
-├── run/                     # Utility scripts for running this project
 ├── optimizer/               # DARL Optimization framework
 │   ├── ahpo.py              
 │   └── search_space/  
