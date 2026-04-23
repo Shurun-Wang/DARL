@@ -2,11 +2,6 @@ import argparse
 import warnings
 from pathlib import Path
 import yaml
-from optimizer.bayesian_tpe import tpe_optimizer
-from optimizer.random_search import rs_optimizer
-from optimizer.generic_algorithm import ga_optimizer
-from optimizer.reinforce import rl_optimizer
-from optimizer.ppo import ppo_optimizer
 from optimizer.darl import darl_optimizer
 from utils import seed_everything, get_dict
 from data.get_data import get_dataload
@@ -24,11 +19,11 @@ def get_args():
     parser.add_argument('--batch_size', default=64, type=int)
 
     # Search controls
-    parser.add_argument('--algorithm', default='rs', type=str, help='tpe, rs, ga, rl, ppo, ahpo')
+    parser.add_argument('--algorithm', default='darl', type=str, help='darl')
     parser.add_argument('--search_trials', default=3000, type=int, help='number of TPE trials')
     parser.add_argument('--search_epochs', default=3, type=int, help='epochs per trial')
 
-    parser.add_argument('--device', default='cpu', help='device')
+    parser.add_argument('--device', default='cuda:0', help='device')
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--seed', default=10, type=int)
 
@@ -45,20 +40,7 @@ def main(args):
     val_loader = dataloader_val_folds['fold_1']
 
     search_dict = get_dict(args.model_name)
-    if args.algorithm == "tpe":
-        history, statistics = tpe_optimizer(args, ch_num, device, train_loader, val_loader, search_dict)
-    elif args.algorithm == "rs":
-        history, statistics = rs_optimizer(args, ch_num, device, train_loader, val_loader, search_dict)
-    elif args.algorithm == "ga":
-        history, statistics = ga_optimizer(args, ch_num, device, train_loader, val_loader, search_dict)
-    elif args.algorithm == "rl":
-        history, statistics = rl_optimizer(args, ch_num, device, train_loader, val_loader, search_dict)
-    elif args.algorithm == "ppo":
-        history, statistics = ppo_optimizer(args, ch_num, device, train_loader, val_loader, search_dict)
-    elif args.algorithm == "darl":
-        history, statistics = darl_optimizer(args, ch_num, device, train_loader, val_loader, search_dict)
-    else:
-        raise NotImplementedError
+    history, statistics = darl_optimizer(args, ch_num, device, train_loader, val_loader, search_dict)
 
     # -------------------- Save best hp --------------------
     out_dir = Path("scripts") / args.model_name
