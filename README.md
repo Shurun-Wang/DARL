@@ -159,7 +159,3 @@ python main_plot_topo.py --dataset 'adhd' --model_name 'OhCNN'
 ## 📜 License
 
 This project is licensed under the [MIT License](https://www.google.com/search?q=LICENSE).
-
-
-```
-```
