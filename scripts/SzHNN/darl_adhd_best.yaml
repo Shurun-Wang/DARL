@@ -1,0 +1,14 @@
+opt: rms
+lr: 0.005
+conv1_filter: 5
+conv1_kernel_size: 10
+pool1_kernel_size: 4
+pool1_stride: 4
+conv2_filter: 15
+conv2_kernel_size: 5
+pool2_kernel_size: 4
+pool2_stride: 3
+lstm_hidden: 32
+lstm_num_layer: 1
+dense: 128
+drop_rate: 0.5

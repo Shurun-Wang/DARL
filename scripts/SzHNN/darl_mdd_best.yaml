@@ -1,0 +1,14 @@
+opt: adamw
+lr: 0.005
+conv1_filter: 5
+conv1_kernel_size: 15
+pool1_kernel_size: 8
+pool1_stride: 4
+conv2_filter: 20
+conv2_kernel_size: 20
+pool2_kernel_size: 6
+pool2_stride: 4
+lstm_hidden: 16
+lstm_num_layer: 1
+dense: 128
+drop_rate: 0.6
