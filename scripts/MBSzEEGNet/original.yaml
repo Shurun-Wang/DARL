@@ -1,0 +1,39 @@
+opt: "adamw"
+lr: 0.001
+
+scc_1_temp_chan: 20
+scc_1_ksize: 0.1
+scc_1_pool_size: 0.5
+scc_1_pool_stride: 0.1
+scc_1_drop_rate: 0.5
+
+scc_2_temp_chan: 20
+scc_2_ksize: 0.8
+scc_2_pool_size: 0.5
+scc_2_pool_stride: 0.1
+scc_2_drop_rate: 0.5
+
+eeg_1_eeg_ksize: 0.1
+eeg_1_filter_1: 8
+eeg_1_filter_2: 16
+eeg_1_filter_3: 16
+eeg_1_pool_kernel_1: 4
+eeg_1_pool_stride_1: 4
+eeg_1_pool_kernel_2: 8
+eeg_1_pool_stride_2: 8
+eeg_1_drop_1: 0.5
+eeg_1_drop_2: 0.5
+
+eeg_2_eeg_ksize: 0.5
+eeg_2_filter_1: 8
+eeg_2_filter_2: 16
+eeg_2_filter_3: 16
+eeg_2_pool_kernel_1: 4
+eeg_2_pool_stride_1: 4
+eeg_2_pool_kernel_2: 8
+eeg_2_pool_stride_2: 8
+eeg_2_drop_1: 0.5
+eeg_2_drop_2: 0.5
+
+emb_size: 8
+drop_linear: 0.4
