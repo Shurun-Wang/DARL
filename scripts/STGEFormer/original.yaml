@@ -1,0 +1,53 @@
+opt: "adamw"
+lr: 0.001
+
+patch_embed_d_model: 128
+patch_len: 128
+patch_stride: 64
+patch_drop: 0.1
+encoder_d_model: 128
+
+encoder_1_drop: 0.1
+encoder_1_n_heads: 8
+encoder_1_diff: 512
+encoder_1_dropout: 0.1
+
+encoder_2_drop: 0.1
+encoder_2_n_heads: 8
+encoder_2_diff: 512
+encoder_2_dropout: 0.1
+
+encoder_3_drop: 0.1
+encoder_3_n_heads: 8
+encoder_3_diff: 512
+encoder_3_dropout: 0.1
+
+encoder_4_drop: 0.1
+encoder_4_n_heads: 8
+encoder_4_diff: 512
+encoder_4_dropout: 0.1
+
+knn: 16
+graph_embed_dim: 16
+
+spatial_1_drop: 0.1
+spatial_1_n_heads: 8
+spatial_1_diff: 512
+spatial_1_dropout: 0.1
+
+spatial_2_drop: 0.1
+spatial_2_n_heads: 8
+spatial_2_diff: 512
+spatial_2_dropout: 0.1
+
+spatial_3_drop: 0.1
+spatial_3_n_heads: 8
+spatial_3_diff: 512
+spatial_3_dropout: 0.1
+
+spatial_4_drop: 0.1
+spatial_4_n_heads: 8
+spatial_4_diff: 512
+spatial_4_dropout: 0.1
+
+dropout: 0.1
