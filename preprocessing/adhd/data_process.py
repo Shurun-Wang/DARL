@@ -65,8 +65,6 @@ if __name__ == '__main__':
 
     control_data_path = os.path.join(root_path, 'data/adhd/raw_data/control')
     all_control_path = glob(control_data_path + '/*.mat')
-
-
     for num in range(len(all_control_path)):
         data = read_data(all_control_path[num], STANDARD_CHANNELS)
 
@@ -81,6 +79,7 @@ if __name__ == '__main__':
 
     patient_data_path = os.path.join(root_path, 'data/adhd/raw_data/patient')
     all_patient_path = glob(patient_data_path + '/*.mat')
+
     for num in range(len(all_patient_path)):
         data = read_data(all_patient_path[num], STANDARD_CHANNELS)
 
