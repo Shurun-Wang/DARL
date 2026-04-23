@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 def get_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--dataset', default='mdd', type=str, choices=['adhd', 'mdd', 'sch', 'idd'])
+    parser.add_argument('--dataset', default='adhd', type=str, choices=['adhd', 'mdd', 'sch', 'idd'])
     parser.add_argument('--model_name', default='OhCNN', type=str,
                         choices=['OhCNN', 'DeprNet', 'SzHNN', 'MBSzEEGNet', 'STGEFormer'])
 
@@ -28,7 +28,7 @@ def get_args():
     parser.add_argument('--lr_patience', default=10, type=int, help='learning rate decay')
     parser.add_argument('--lr_decay_factor', default=0.5, type=float, help='learning rate decay factor')
 
-    parser.add_argument('--device', default='cpu', help='device')
+    parser.add_argument('--device', default='cuda:0', help='device')
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--seed', default=10, type=int, help='10,20,30,40,50')
 
@@ -39,13 +39,12 @@ def get_args():
 
 
 def seed_everything(seed=6718):
-    random.seed(seed)  # Python random module
-    np.random.seed(seed)  # Numpy module
-    torch.manual_seed(seed)  # PyTorch
-    torch.cuda.manual_seed(seed)  # PyTorch, for CUDA
-    torch.backends.cudnn.deterministic = True  # PyTorch, for deterministic algorithm
-    torch.backends.cudnn.benchmark = False  # PyTorch, to disable dynamic algorithms
-
+    random.seed(seed) 
+    np.random.seed(seed) 
+    torch.manual_seed(seed) 
+    torch.cuda.manual_seed(seed) 
+    torch.backends.cudnn.deterministic = True 
+    torch.backends.cudnn.benchmark = False 
 # -------------------------------------------------------------------------------------------------------------
 
 
@@ -141,7 +140,6 @@ def main(args):
     test_f1_list = []
     test_auc_list = []
 
-    # 💡 新增：用于在全局累加 5 折产生的 attributions
     global_hc_attributions = []
     global_pt_attributions = []
 
