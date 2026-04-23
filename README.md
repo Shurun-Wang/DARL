@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.10-orange)](https://pytorch.org/)
 
-Welcome to the official repository for the DRAL framework. Under Review.
+Welcome to the official repository for the DARL framework. Under Review.
 
 ### ✨ Key Features
 * **Standardized Data Processing Pipeline**
