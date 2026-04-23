@@ -1,0 +1,36 @@
+opt: "adamw"
+lr: 0.001
+
+conv1_channel: 5
+conv1_kernel_size: 3
+conv1_stride: 1
+maxpool1_kernel_size: 2
+maxpool1_stride: 2
+
+conv2_channel: 5
+conv2_kernel_size: 3
+conv2_stride: 1
+maxpool2_kernel_size: 2
+maxpool2_stride: 2
+
+drop_1: 0.5
+
+conv3_channel: 5
+conv3_kernel_size: 3
+conv3_stride: 1
+avgpool1_kernel_size: 2
+avgpool1_stride: 2
+
+drop_2: 0.5
+
+conv4_channel: 5
+conv4_kernel_size: 3
+conv4_stride: 1
+avgpool2_kernel_size: 2
+avgpool2_stride: 2
+
+conv5_channel: 5
+conv5_kernel_size: 3
+conv5_stride: 1
+
+drop_3: 0.5
