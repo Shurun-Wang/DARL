@@ -7,26 +7,26 @@ class DeprNet(nn.Module):
         super().__init__()
         self.features = nn.Sequential(
             # Block 1
-            nn.Conv2d(1, cfg['conv_kernel_1'], kernel_size=(1, cfg['conv_kernel_1']), stride=(1, cfg['conv_stride_1'])),
-            nn.BatchNorm2d(cfg['conv_kernel_1']),
+            nn.Conv2d(1, cfg['conv_channel_1'], kernel_size=(1, cfg['conv_kernel_1']), stride=(1, cfg['conv_stride_1'])),
+            nn.BatchNorm2d(cfg['conv_channel_1']),
             nn.LeakyReLU(inplace=True),
             nn.MaxPool2d(kernel_size=(1, cfg['pool_kernel_1']), stride=(1, cfg['pool_stride_1'])),
 
             # Block 2
-            nn.Conv2d(cfg['conv_kernel_1'], cfg['conv_kernel_2'], kernel_size=(1, cfg['conv_kernel_2']), stride=(1, cfg['conv_stride_2'])),
-            nn.BatchNorm2d(cfg['conv_kernel_2']),
+            nn.Conv2d(cfg['conv_channel_1'], cfg['conv_channel_2'], kernel_size=(1, cfg['conv_kernel_2']), stride=(1, cfg['conv_stride_2'])),
+            nn.BatchNorm2d(cfg['conv_channel_2']),
             nn.LeakyReLU(inplace=True),
             nn.MaxPool2d(kernel_size=(1, cfg['pool_kernel_2']), stride=(1, cfg['pool_stride_2'])),
 
             # Block 3
-            nn.Conv2d(cfg['conv_kernel_2'], cfg['conv_kernel_3'], kernel_size=(1, cfg['conv_kernel_3']), stride=(1, cfg['conv_stride_3'])),
-            nn.BatchNorm2d(cfg['conv_kernel_3']),
+            nn.Conv2d(cfg['conv_channel_2'], cfg['conv_channel_3'], kernel_size=(1, cfg['conv_kernel_3']), stride=(1, cfg['conv_stride_3'])),
+            nn.BatchNorm2d(cfg['conv_channel_3']),
             nn.LeakyReLU(inplace=True),
             nn.MaxPool2d(kernel_size=(1, cfg['pool_kernel_3']), stride=(1, cfg['pool_stride_3'])),
 
             # Block 4
-            nn.Conv2d(cfg['conv_kernel_3'], cfg['conv_kernel_4'], kernel_size=(1, cfg['conv_kernel_4']), stride=(1, cfg['conv_stride_4'])),
-            nn.BatchNorm2d(cfg['conv_kernel_4']),
+            nn.Conv2d(cfg['conv_channel_3'], cfg['conv_channel_4'], kernel_size=(1, cfg['conv_kernel_4']), stride=(1, cfg['conv_stride_4'])),
+            nn.BatchNorm2d(cfg['conv_channel_4']),
             nn.LeakyReLU(inplace=True),
             nn.MaxPool2d(kernel_size=(1, cfg['pool_kernel_4']), stride=(1, cfg['pool_stride_4'])),
         )
