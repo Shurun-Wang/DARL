@@ -1,143 +1,154 @@
-import argparse
-import os
+from pathlib import Path
 import numpy as np
-import torch
+import pandas as pd
 import matplotlib.pyplot as plt
 import mne
 
-plt.rcParams['font.family'] = 'serif'
-plt.rcParams['font.serif'] = ['Times New Roman']
-plt.rcParams['axes.unicode_minus'] = False 
+# ======================= 可修改的设置 =======================
+DATA_DIR = Path(__file__).resolve().parent / 'results_attributions'
+OUTPUT_DIR = DATA_DIR / 'adhd_darl_regions'
+SEEDS = [10, 20, 30, 40, 50]
+FOLD = 1
+NORMALIZE = True
+FIGURE_SIZE = (6.8, 3.2)
+TITLE_SIZE = 12
+CHANNEL_SIZE = 8
+COLORMAP = 'RdBu_r'
+SHOW_FIGURE = True
+PERMUTATIONS = 9999
+BOOTSTRAPS = 5000
+STATISTICAL_SEED = 2026
 
 
-def get_args():
-    parser = argparse.ArgumentParser(description="Load saved attributions and plot topomaps.")
-    parser.add_argument('--dataset', default='idd', type=str, choices=['adhd', 'mdd', 'sch', 'idd'])
-    parser.add_argument('--model_name', type=str, default='OhCNN',
-                        choices=['OhCNN', 'DeprNet', 'SzHNN', 'MBSzEEGNet', 'STGEFormer'])
-    return parser.parse_args()
+REGIONS = {
+    'Frontal': ['Fp1', 'Fp2', 'F3', 'F4', 'F7', 'F8', 'Fz'],
+    'Temporal': ['T7', 'T8', 'P7', 'P8'],
+    'Parietal': ['P3', 'P4', 'Pz'],
+    'Occipital': ['O1', 'O2'],
+    'Central': ['C3', 'C4', 'Cz'],
+}
+plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams['axes.unicode_minus'] = False
 
 
-def plot_global_topomaps(hc_orig, pt_orig, hc_darl, pt_darl, ch_names, model_name, dataset, cur_path):
-    def process_and_mean(arr):
-        arr = np.nan_to_num(arr, nan=0.0, posinf=0.0, neginf=0.0)
-        return np.nanmean(arr, axis=0) if len(arr) > 0 else np.zeros(len(ch_names))
+def load_data():
+    """每个受试者、每个种子保留一条通道向量，并算各区域通道均值。"""
+    records, seed_maps = [], []
+    reference_channels, reference_subjects = None, None
+    for seed in SEEDS:
+        filename = f'adhd_darl_adhd_fold_{FOLD}_seed_{seed}.npz'
+        with np.load(DATA_DIR / filename, allow_pickle=False) as data:
+            channels = data['channel_names'].tolist()
+            subjects = [np.unique(data[f'{g}_subject_ids']) for g in ['hc', 'pt']]
+            if reference_channels is not None:
+                if channels != reference_channels or any(not np.array_equal(a, b) for a, b in zip(subjects, reference_subjects)):
+                    raise ValueError(f'种子间通道或受试者不一致：{filename}')
+            reference_channels, reference_subjects = channels, subjects
+            if set(sum(REGIONS.values(), [])) != set(channels):
+                raise ValueError('区域定义没有覆盖全部通道，请检查 REGIONS')
 
-    hc_mean_orig = process_and_mean(hc_orig)
-    pt_mean_orig = process_and_mean(pt_orig)
-    hc_mean_darl = process_and_mean(hc_darl)
-    pt_mean_darl = process_and_mean(pt_darl)
+            group_maps = []
+            for key, group, names in zip(['hc', 'pt'], ['HC', 'ADHD'], subjects):
+                values, ids = data[key], data[f'{key}_subject_ids']
+                if not len(names) or not np.isfinite(values).all():
+                    raise ValueError(f'空组或非有限归因值：{filename}, {key}')
+                subject_maps = []
+                for subject in names:
+                    vector = values[ids == subject].mean(axis=0)  # 受试者内平均全部片段。
+                    if NORMALIZE and vector.sum() > 0:
+                        vector = vector / vector.sum()
+                    subject_maps.append(vector)
+                    failed = int((~data['completeness_pass'][data['subject_ids'] == subject]).sum())
+                    for region, electrode_names in REGIONS.items():
+                        indices = [channels.index(ch) for ch in electrode_names]
+                        records.append(dict(dataset='adhd', configuration='darl_adhd', fold=FOLD,
+                            seed=seed, subject_id=str(subject), group=group, region=region,
+                            value=float(vector[indices].mean()), n_channels=len(indices),
+                            n_windows=int((ids == subject).sum()), ig_failed_windows=failed,
+                            normalized=NORMALIZE, source_file=filename))
+                group_maps.append(np.mean(subject_maps, axis=0))
+            seed_maps.append(group_maps)
+            failures = int((~data['completeness_pass']).sum())
+            if failures:
+                print(f'注意：{filename} 有 {failures} 个积分容限失败片段，仍保留。')
+    return pd.DataFrame(records), np.mean(seed_maps, axis=0), reference_subjects, reference_channels
 
-    info = mne.create_info(ch_names=ch_names, sfreq=200, ch_types='eeg')
-    try:
-        info.set_montage('standard_1020')
-    except Exception as e:
-        print(f"error: {e}")
 
-    vmax_orig = max(np.max(hc_mean_orig), np.max(pt_mean_orig))
-    vmin_orig = min(np.min(hc_mean_orig), np.min(pt_mean_orig))
+def subject_group_test(hc, patients, rng):
+    effect = patients.mean() - hc.mean()
+    pooled = np.concatenate([hc, patients])
+    exceedances = 0
+    for _ in range(PERMUTATIONS):
+        shuffled = rng.permutation(pooled)
+        difference = shuffled[len(hc):].mean() - shuffled[:len(hc)].mean()
+        exceedances += abs(difference) >= abs(effect) - 1e-12
+    p = (exceedances + 1) / (PERMUTATIONS + 1)  # Monte Carlo +1 修正，p 不会变成 0。
+    # 95% CI 也重采样受试者，而不是把种子记录当独立样本。
+    differences = rng.choice(patients, (BOOTSTRAPS, len(patients))).mean(axis=1) - rng.choice(hc, (BOOTSTRAPS, len(hc))).mean(axis=1)
+    lower, upper = np.quantile(differences, [.025, .975])
+    return effect, p, lower, upper
 
-    vmax_darl = max(np.max(hc_mean_darl), np.max(pt_mean_darl))
-    vmin_darl = min(np.min(hc_mean_darl), np.min(pt_mean_darl))
+
+def save_region_statistics(records):
+    records.to_csv(OUTPUT_DIR / 'region_subject_seed_values.csv', index=False, encoding='utf-8-sig')
+    summary = records.groupby(['region', 'group'], sort=False).agg(
+        mean=('value', 'mean'), std=('value', 'std'), n_subject_seed_records=('value', 'size'),
+        n_subjects=('subject_id', 'nunique'), n_seeds=('seed', 'nunique')).reset_index()
+    summary.to_csv(OUTPUT_DIR / 'region_mean_std.csv', index=False, encoding='utf-8-sig')
+
+    subject_means = records.groupby(['region', 'group', 'subject_id'], sort=False).value.mean().reset_index()
+    tests = []
+    rng = np.random.default_rng(STATISTICAL_SEED)
+    for region in REGIONS:
+        subset = subject_means[subject_means.region == region]
+        hc = subset[subset.group == 'HC'].value.to_numpy()
+        patients = subset[subset.group == 'ADHD'].value.to_numpy()
+        effect, p, lower, upper = subject_group_test(hc, patients, rng)
+        tests.append(dict(region=region, effect_ADHD_minus_HC=effect, ci95_low=lower,
+            ci95_high=upper, p_two_sided=p, n_HC_subjects=len(hc), n_ADHD_subjects=len(patients),
+            test='subject-level label permutation after five-seed averaging'))
+    tests = pd.DataFrame(tests)
+
+    p = tests.p_two_sided.to_numpy()
+    order = np.argsort(p)
+    adjusted = np.minimum.accumulate((p[order] * len(p) / np.arange(1, len(p) + 1))[::-1])[::-1]
+    q = np.empty(len(p))
+    q[order] = np.minimum(adjusted, 1)
+    tests['q_FDR'] = q
+    tests.to_csv(OUTPUT_DIR / 'region_group_tests.csv', index=False, encoding='utf-8-sig')
+    print(summary.to_string(index=False))
 
 
-    vmax_total = max(vmax_orig, vmax_darl)
-    vmin_total = min(vmin_orig, vmin_darl)
-
-    fig, axes = plt.subplots(2, 2, figsize=(15, 8))
-
-    def draw_topo(mean_data, ax, title, vmin, vmax):
-        im, _ = mne.viz.plot_topomap(
-            mean_data, info, axes=ax, show=False, cmap='RdBu_r', vlim=(vmin, vmax), names=ch_names
-        )
-        ax.set_title(title, fontsize=15, fontweight='bold', fontfamily='Times New Roman')
-        
+def plot_maps(maps, subjects, channels):
+    info = mne.create_info(channels, sfreq=200, ch_types='eeg')
+    info.set_montage('standard_1020')
+    vmin, vmax = maps.min(), maps.max()       # 对照与患者共用同一色标。
+    if vmin == vmax:
+        vmax = vmin + 1e-8
+    fig, axes = plt.subplots(1, 2, figsize=FIGURE_SIZE)
+    for ax, vector, group, names in zip(axes, maps, ['Control', 'ADHD'], subjects):
+        image, _ = mne.viz.plot_topomap(vector, info, axes=ax, show=False,
+            cmap=COLORMAP, vlim=(vmin, vmax), names=channels, contours=0)
+        ax.set_title(f'DARL · {group} (n={len(names)})', fontsize=TITLE_SIZE, pad=4)
         for text in ax.texts:
-            text.set_fontsize(13)
-            text.set_fontweight('bold')
-            text.set_fontfamily('Times New Roman')
-        return im
-
-    plt.subplots_adjust(bottom=0.15, hspace=0.4, wspace=0.1)
-
-    im_orig = draw_topo(hc_mean_orig, axes[0, 0], f"Expert - HC (n={len(hc_orig)})", vmin_total, vmax_total)
-    draw_topo(pt_mean_orig, axes[0, 1], f"Expert - {dataset.upper()} (n={len(pt_orig)})", vmin_total, vmax_total)
-
-    cbar_ax_orig = fig.add_axes([0.4, 0.50, 0.2, 0.02])
-    cbar_orig = fig.colorbar(im_orig, cax=cbar_ax_orig, orientation='horizontal')
-    cbar_orig.ax.tick_params(labelsize=13)
-    for tick in cbar_orig.ax.get_xticklabels(): 
-        tick.set_fontfamily('Times New Roman')
-
-    im_darl = draw_topo(hc_mean_darl, axes[1, 0], f"DARL - HC (n={len(hc_darl)})", vmin_total, vmax_total)
-    draw_topo(pt_mean_darl, axes[1, 1], f"DARL - {dataset.upper()} (n={len(pt_darl)})", vmin_total, vmax_total)
-
-    cbar_ax_darl = fig.add_axes([0.4, 0.08, 0.2, 0.02])
-    cbar_darl = fig.colorbar(im_darl, cax=cbar_ax_darl, orientation='horizontal')
-    cbar_darl.ax.tick_params(labelsize=13)
-    for tick in cbar_darl.ax.get_xticklabels(): 
-        tick.set_fontfamily('Times New Roman')
-
-    plt.suptitle(f"{model_name} Global Spatial Attention Comparison", fontsize=18, fontweight='bold',
-                 fontfamily='Times New Roman', y=0.98)
-
-    plt.subplots_adjust(hspace=0.3, wspace=0.1)
-
-    path = cur_path
-    save_file = f"{path}/{dataset}_{model_name}_comparison_separated.png"
-    plt.savefig(save_file, dpi=300, bbox_inches='tight')
-    print(f"Saved figure to {save_file}")
-    plt.close()
+            text.set_fontsize(CHANNEL_SIZE)
+    fig.subplots_adjust(left=.02, right=.84, bottom=.03, top=.88, wspace=.12)
+    colorbar = fig.colorbar(image, cax=fig.add_axes([.87, .20, .025, .58]))
+    colorbar.ax.tick_params(labelsize=9)
+    colorbar.set_label('Absolute IG share' if NORMALIZE else 'Mean absolute IG', fontsize=10)
+    fig.savefig(OUTPUT_DIR / 'adhd_darl_topomap.png', dpi=600)
+    if SHOW_FIGURE:
+        plt.show()
+    plt.close(fig)
 
 
 def main():
-    args = get_args()
-    cur_path = os.path.dirname(os.path.abspath(__file__))
-
-    data_10_orig = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_original_seed_10.npz')
-    data_20_orig = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_original_seed_20.npz')
-    data_30_orig = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_original_seed_30.npz')
-    data_40_orig = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_original_seed_40.npz')
-    data_50_orig = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_original_seed_50.npz')
-
-    all_hc_original = np.concatenate([
-        data_10_orig['hc'], data_20_orig['hc'], data_30_orig['hc'], data_40_orig['hc'], data_50_orig['hc']
-    ])
-    all_pt_original = np.concatenate([
-        data_10_orig['pt'], data_20_orig['pt'], data_30_orig['pt'], data_40_orig['pt'], data_50_orig['pt']
-    ])
-
-    data_10_darl = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_darl_seed_10.npz')
-    data_20_darl = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_darl_seed_20.npz')
-    data_30_darl = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_darl_seed_30.npz')
-    data_40_darl = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_darl_seed_40.npz')
-    data_50_darl = np.load(cur_path + '/results/' + args.model_name + '/' + args.dataset + '_darl_seed_50.npz')
-
-    all_hc_darl = np.concatenate([
-        data_10_darl['hc'], data_20_darl['hc'], data_30_darl['hc'], data_40_darl['hc'], data_50_darl['hc']
-    ])
-    all_pt_darl = np.concatenate([
-        data_10_darl['pt'], data_20_darl['pt'], data_30_darl['pt'], data_40_darl['pt'], data_50_darl['pt']
-    ])
-
-    if args.dataset == 'adhd':
-        ch_names = ['Fp1', 'Fp2', 'F3', 'F4', 'C3', 'C4', 'P3', 'P4', 'O1', 'O2', 'F7', 'F8', 'T7', 'T8', 'P7', 'P8',
-                    'Fz', 'Cz', 'Pz']
-    elif args.dataset == 'mdd':
-        ch_names = ['Fp1', 'Fp2', 'F3', 'F4', 'C3', 'C4', 'P3', 'P4', 'O1', 'O2',
-                    'F7', 'F8', 'T3', 'T4', 'T5', 'T6', 'Fz', 'Cz', 'Pz']
-    elif args.dataset == 'sch':
-        ch_names = ['Fp2', 'F8', 'T4', 'T6', 'O2', 'Fp1', 'F7', 'T3', 'T5', 'O1',
-                    'F4', 'C4', 'P4', 'F3', 'C3', 'P3', 'Fz', 'Cz', 'Pz']
-    else:
-        ch_names = ['AF3', 'F7', 'F3', 'FC5', 'T7', 'P7', 'O1',
-                    'O2', 'P8', 'T8', 'FC6', 'F4', 'F8', 'AF4']
-
-    plot_global_topomaps(
-        all_hc_original, all_pt_original, all_hc_darl, all_pt_darl,
-        ch_names, args.model_name, args.dataset, cur_path
-    )
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    records, maps, subjects, channels = load_data()
+    save_region_statistics(records)
+    plot_maps(maps, subjects, channels)
+    print('输出目录：', OUTPUT_DIR)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
