@@ -109,8 +109,6 @@ def main(args):
         },
     })
 
-    # Raw per-trial accuracy/FLOPs/timing in history supports later Pareto and
-    # accuracy-gain-per-GPU-hour analyses without rerunning HPO.
     out_dir = Path("scripts") / str(args.fold_idx) /args.model_name
     if args.algorithm not in ('darl'):
         out_dir = out_dir / 'ablation' / args.algorithm
