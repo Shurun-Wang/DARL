@@ -1,0 +1,206 @@
+{
+  "subject_data": [
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0000.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0001.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0002.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0003.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0004.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0005.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0006.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0007.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0008.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0009.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0010.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 6,
+      "subject_name": "H6",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/H6/sample_0011.pkl",
+      "label": 0
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0000.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0001.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0002.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0003.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0004.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0005.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0006.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0007.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0008.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0009.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0010.pkl",
+      "label": 1
+    },
+    {
+      "subject_id": 5,
+      "subject_name": "P5",
+      "file": "/Users/wangsr/PycharmProjects/NAI_tnsre_revision/data/idd/processed_data_nonoverlap/P5/sample_0011.pkl",
+      "label": 1
+    }
+  ],
+  "dataset_info": {
+    "sampling_rate": 128,
+    "ch_names": [
+      "AF3",
+      "F7",
+      "F3",
+      "FC5",
+      "T7",
+      "P7",
+      "O1",
+      "O2",
+      "P8",
+      "T8",
+      "FC6",
+      "F4",
+      "F8",
+      "AF4"
+    ],
+    "min": -0.0060122020609557035,
+    "max": 0.0022948820322701868,
+    "mean": [
+      -1.628137624567189e-07,
+      -2.7112815206273527e-07,
+      1.5024180458998156e-07,
+      2.449694417910881e-07,
+      -1.783092505445935e-08,
+      -1.5827965567496755e-08,
+      5.046688362256711e-08,
+      7.361757223271522e-08,
+      3.128073155126745e-07,
+      -6.406726120076333e-08,
+      -1.552201087889094e-07,
+      3.3530371629334326e-07,
+      -1.8650382265271147e-07,
+      -2.9401473625860387e-07
+    ],
+    "std": [
+      2.4855526499861143e-05,
+      3.171573696230555e-05,
+      2.2765100931817076e-05,
+      5.625801355919406e-05,
+      2.5869281179025334e-05,
+      2.507924871551281e-05,
+      2.5417021183669115e-05,
+      2.4243522937299882e-05,
+      5.7311510782169965e-05,
+      3.691352929274699e-05,
+      3.0761952635960736e-05,
+      5.329736514995103e-05,
+      3.568168577468213e-05,
+      3.0166449764003075e-05
+    ],
+    "split_seed": 42,
+    "validation_fraction": 0.2,
+    "split_level": "subject",
+    "window_seconds": 10,
+    "overlap_ratio": 0.0
+  }
+}
