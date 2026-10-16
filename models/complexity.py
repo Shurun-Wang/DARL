@@ -1,0 +1,30 @@
+COMPLEXITY_BASELINES = {
+    "adhd": {
+        "DeprNet":       {"param": 0.137354, "flop": 0.241429648}, # M， G
+        "MBSzEEGNet":    {"param": 0.118718, "flop": 0.179880432},
+        "OhCNN":         {"param": 0.000622, "flop": 0.0007108},
+        "SzHNN":         {"param": 0.009814, "flop": 0.006221122},
+        "STGEFormer":    {"param": 5.526912, "flop": 0.2273728},
+    },
+    "idd": {
+        "DeprNet":       {"param": 0.119434, "flop": 0.177895568},
+        "MBSzEEGNet":    {"param": 0.100198, "flop": 0.132580432},
+        "OhCNN":         {"param": 0.000547, "flop": 0.00056095},
+        "SzHNN":         {"param": 0.009439, "flop": 0.005476372},
+        "STGEFormer":    {"param": 4.601934, "flop": 0.166620416},
+    },
+    "mdd": {
+        "DeprNet":       {"param": 0.137354, "flop": 0.241429648},
+        "MBSzEEGNet":    {"param": 0.118718, "flop": 0.179880432},
+        "OhCNN":         {"param": 0.000622, "flop": 0.0007108},
+        "SzHNN":         {"param": 0.009814, "flop": 0.006221122},
+        "STGEFormer":    {"param": 5.526912, "flop": 0.2273728},
+    },
+    "sch": {
+        "DeprNet":       {"param": 0.137354, "flop": 0.241429648},
+        "MBSzEEGNet":    {"param": 0.118718, "flop": 0.179880432},
+        "OhCNN":         {"param": 0.000622, "flop": 0.0007108},
+        "SzHNN":         {"param": 0.009814, "flop": 0.006221122},
+        "STGEFormer":    {"param": 5.526912, "flop": 0.2273728},
+    }
+}
