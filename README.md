@@ -98,12 +98,11 @@ Execute the proposed DARL algorithm:
 
 ```bash
 python main_hpc_finder.py --dataset 'adhd' --model_name 'OhCNN' --search_trials 3000
-python main_top3_config.py --dataset 'adhd' --model_name 'OhCNN'
 ```
 
 ### 2\. Final Model Training and Evaluation
 
-Once the optimal hyperparameter configurations are identified, comprehensively evaluate them using a subject-independent 5-fold cross-validation strategy:
+Retraining the model with optimized configuration:
 
 ```bash
 python main_model_train.py --dataset 'adhd' --model_name 'OhCNN' --epochs 100 --batch_size 64
@@ -114,11 +113,8 @@ python main_model_train.py --dataset 'adhd' --model_name 'OhCNN' --epochs 100 --
 Generate global spatial attention topoplots to extract physiological insights using Integrated Gradients:
 
 ```bash
-python main_plot_topo.py --dataset 'adhd' --model_name 'OhCNN'
+python main_plot_topo.py
 ```
-
-*This will generate PDF files (e.g., `Topomap_SzHNN_Global.pdf`) illustrating the spatial attention differences between Healthy Controls (HC) and Patients.*
-
 
 -----
 
@@ -140,13 +136,10 @@ python main_plot_topo.py --dataset 'adhd' --model_name 'OhCNN'
 │   ├── OhCNN.py
 │   ├── STGEFormer.py
 │   └── SzHNN.py
-├── scripts/                 # Utility scripts for HPC
-├── optimizer/               # DARL Optimization framework
-│   ├── ahpo.py              
-│   └── search_space/  
+├── scripts/                 # Model configuration
+├── optimizer/               # DARL optimization framework
 ├── preprocessing/           # Data preprocessing and data spilt     
 ├── main_hpc_finder.py       # Main entry for the architecture search phase
-├── main_top3_config.py      # Main entry for selecting the best HPC
 ├── main_model_train.py      # Main entry for the 5-fold CV evaluation phase
 ├── main_plot_topo.py        # Main entry for XAI phase
 ├── utils.py                 # tools
