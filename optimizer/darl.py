@@ -7,8 +7,10 @@ import torch.nn.functional as F
 import torch.optim as optim
 import numpy as np
 import time
-from utils import get_model_complexity_info
+import math
 from models.complexity import COMPLEXITY_BASELINES
+from optimizer.metrics import evaluate_balanced_accuracy
+from optimizer.runtime import measure_model_complexity, start_timer, stop_timer
 
 
 def train_one_epoch_adversarial(model, device, data_loader, criterion, optimizer, adv_cfg):
@@ -33,16 +35,7 @@ def train_one_epoch_adversarial(model, device, data_loader, criterion, optimizer
 
 
 def evaluate(model, device, data_loader):
-    model.eval()
-    correct, total = 0, 0
-    with torch.no_grad():
-        for samples, targets in data_loader:
-            samples, targets = samples.to(device), targets.to(device)
-            outputs = model(samples)
-            _, predicted = torch.max(outputs, 1)
-            correct += (predicted == targets).sum().item()
-            total += targets.size(0)
-    return (correct / total) if total > 0 else 0.0
+    return evaluate_balanced_accuracy(model, device, data_loader)
 
 
 def train_child_phased_safe(args, builder_cfg, destroyer_cfg, ch_num, train_loader, val_loader,
@@ -51,12 +44,14 @@ def train_child_phased_safe(args, builder_cfg, destroyer_cfg, ch_num, train_load
         model = get_model(args.model_name, ch_num, builder_cfg).to(device)
         optimizer = get_opt(model.parameters(), builder_cfg)
     except Exception as e:
-        return invalid_reward, 0.0, 0.0 # Acc, Params, Flops
+        return invalid_reward, None, None, False # Acc, Params, Flops, Profiled
 
     if not safe_forward_check(model, device, train_loader):
-        return invalid_reward, 0.0, 0.0 # Acc, Params, Flops
+        return invalid_reward, None, None, False # Acc, Params, Flops, Profiled
 
-    params_m, flops_g = get_model_complexity_info(model, input_shape=(1, ch_num, 2000), device=device)
+    params_m, flops_g, complexity_profiled = measure_model_complexity(model, ch_num, device)
+    if not complexity_profiled:
+        return invalid_reward, params_m, None, False
 
     criterion = nn.CrossEntropyLoss()
 
@@ -66,7 +61,7 @@ def train_child_phased_safe(args, builder_cfg, destroyer_cfg, ch_num, train_load
         acc = evaluate(model, device, val_loader)
         if acc > best_val_acc:
             best_val_acc = acc
-    return float(best_val_acc), params_m, flops_g
+    return float(best_val_acc), params_m, flops_g, True
 
 
 def compute_gae(rewards, values, device, gamma=0.99, lam=0.95):
@@ -205,11 +200,11 @@ class ContinuousPPOController(nn.Module):
 
 
 class PPO:
-    def __init__(self, controller, device, lr=3e-4, batch_size=8):
+    def __init__(self, controller, device, lr=3e-4, buffer_capacity=8):
         self.controller = controller
         self.optimizer = optim.AdamW(controller.parameters(), lr=lr)
         self.device = device
-        self.batch_size = batch_size
+        self.buffer_capacity = buffer_capacity
         self.memory = []
 
     def store_experience(self, actions, log_probs, values, reward):
@@ -217,17 +212,19 @@ class PPO:
             {'actions': actions, 'log_probs': log_probs.detach(), 'values': values.detach(), 'reward': reward})
 
     def update(self):
-        if len(self.memory) < self.batch_size: return 0.0
-        old_log_probs = torch.cat([m['log_probs'] for m in self.memory])
-        rewards = torch.tensor([m['reward'] for m in self.memory])
+        if len(self.memory) < self.buffer_capacity: return 0.0
+        old_log_probs = torch.cat([m['log_probs'] for m in self.memory]).reshape(-1)
+        rewards = torch.tensor([m['reward'] for m in self.memory], device=self.device)
         values = torch.stack([m['values'] for m in self.memory])
         rewards = rewards.repeat_interleave(len(self.controller.keys)).reshape(values.shape)
 
-        batch_adv, batch_ret = torch.zeros_like(rewards).to(self.device), torch.zeros_like(rewards)
+        batch_adv, batch_ret = torch.zeros_like(rewards), torch.zeros_like(rewards)
         for i in range(rewards.shape[0]):
             batch_adv[i], batch_ret[i] = compute_gae(rewards[i], values[i], self.device, gamma=1, lam=1)
 
-        batch_adv = batch_adv.view(-1, 1)
+        # Both discrete Builder and continuous Attacker must use one ratio per
+        # action. N x 1 advantages with N ratios silently broadcast to N x N.
+        batch_adv = batch_adv.reshape(-1)
         batch_ret = batch_ret.view(-1).to(self.device)
 
         total_loss = 0
@@ -239,9 +236,9 @@ class PPO:
                 new_ents.append(res['entropies'])
                 new_vals.append(res['values'])
 
-            new_log_probs = torch.cat(new_log_probs)
-            new_vals = torch.cat(new_vals)
-            new_ents = torch.cat(new_ents)
+            new_log_probs = torch.cat(new_log_probs).reshape(-1)
+            new_vals = torch.cat(new_vals).reshape(-1)
+            new_ents = torch.cat(new_ents).reshape(-1)
 
             ratio = torch.exp(new_log_probs - old_log_probs)
             surr1 = ratio * batch_adv
@@ -259,20 +256,32 @@ class PPO:
         return total_loss / 3
 
 
+
+def builder_reward(acc, param, param_base, flop, flop_base):
+    p_ratio = param / param_base
+    f_ratio = flop / flop_base
+
+    penalty_factor = math.sqrt(
+        max(1.0, p_ratio) * max(1.0, f_ratio)
+    )
+    return acc / penalty_factor
+
+
 def darl_optimizer(args, ch_num, device, train_loader, val_loader, search_dict):
-    W_PARAMS = 0.05
-    W_FLOPS = 0.05
+
     comp = COMPLEXITY_BASELINES[args.dataset][args.model_name]
     param_base, flop_base = comp['param'], comp['flop']
     time1 = time.time()
 
-    destroyer_space = {'grad_noise': (0.0, 0.01)}
+    destroyer_space = {
+        'grad_noise': (args.grad_noise_min, args.grad_noise_max),
+    }
 
     builder_ctrl = PPOController(search_dict).to(device)
-    builder_ppo = PPO(builder_ctrl, device, batch_size=4)
+    builder_ppo = PPO(builder_ctrl, device, buffer_capacity=args.ppo_buffer_capacity)
 
     destroyer_ctrl = ContinuousPPOController(destroyer_space).to(device)
-    destroyer_ppo = PPO(destroyer_ctrl, device, batch_size=4)
+    destroyer_ppo = PPO(destroyer_ctrl, device, buffer_capacity=args.ppo_buffer_capacity)
     total_episodes = args.search_trials
     history = []
 
@@ -281,12 +290,13 @@ def darl_optimizer(args, ch_num, device, train_loader, val_loader, search_dict):
     successful_hp_set = set()
 
     for episode in range(1, total_episodes + 1):
+        trial_started = start_timer(device)
         stats["total_trials"] += 1
         with torch.no_grad():
             b_res = builder_ctrl.forward(device=device)
             d_res = destroyer_ctrl.forward(device=device)
 
-        acc, param, flop = train_child_phased_safe(
+        acc, param, flop, complexity_profiled = train_child_phased_safe(
             args, b_res['config'], d_res['config'], ch_num, train_loader, val_loader, device, epochs=args.search_epochs)
 
         if acc == -1.0:
@@ -297,12 +307,7 @@ def darl_optimizer(args, ch_num, device, train_loader, val_loader, search_dict):
             config_tuple = tuple(sorted(b_res['config'].items()))
             successful_hp_set.add(config_tuple)
             destroyer_strategy_history[episode] = {'grad_noise': d_res['config']['grad_noise']}
-
-            pen_p = float(np.log10(1 + param / param_base))
-            pen_f = float(np.log10(1 + flop / flop_base))
-            total_penalty = W_PARAMS * pen_p + W_FLOPS * pen_f
-            efficiency_factor = 1.0 - total_penalty
-            r_builder = acc * efficiency_factor
+            r_builder = builder_reward(acc, param, param_base, flop, flop_base)
 
         builder_ppo.store_experience(b_res['actions'], b_res['log_probs'], b_res['values'], r_builder)
         b_loss = builder_ppo.update()
@@ -316,13 +321,19 @@ def darl_optimizer(args, ch_num, device, train_loader, val_loader, search_dict):
 
         history.append({
             "trial": episode,
+            "valid": acc != -1.0,
             "reward": float(r_builder),
             "d_reward": float(r_destroyer),
             "val_acc": float(acc) if acc != -1.0 else 0.0,
+            "val_balanced_accuracy": float(acc) if acc != -1.0 else 0.0,
             "b_loss": float(b_loss),
             "d_loss": float(d_loss),
             "grad_noise": d_res['config']['grad_noise'],
-            "hp": b_res['config']
+            "hp": b_res['config'],
+            "params_m": float(param) if param is not None else None,
+            "flops_g": float(flop) if flop is not None else None,
+            "complexity_profiled": complexity_profiled,
+            "trial_time_seconds": stop_timer(trial_started, device),
         })
 
     unique_successful_arch = len(successful_hp_set)
@@ -331,7 +342,13 @@ def darl_optimizer(args, ch_num, device, train_loader, val_loader, search_dict):
         "success_trials": stats['success_trials'],
         "failed_trials": stats['failed_trials'],
         "unique_successful_configs": unique_successful_arch,
-        "time": time.time()-time1
+        "time": time.time()-time1,
+        "selection_metric": "balanced_accuracy",
+        "grad_noise_min": args.grad_noise_min,
+        "grad_noise_max": args.grad_noise_max,
+        "ppo_buffer_capacity": args.ppo_buffer_capacity,
+        "search_trials": args.search_trials,
+        "search_epochs": args.search_epochs,
     }
 
     print("========== NAS Statistics ==========")
